@@ -134,6 +134,10 @@ void Game::drawBoardGame(sf::RenderWindow& window, Player& player, Dealer& deale
     text.setPosition(40, 400);
     window.draw(text);
 
+    text.setString(to_string(player.points));
+    text.setPosition(605, 800);
+    window.draw(text);
+
     string bet = "BET: " + to_string(player.getBet());
     text.setString(bet);
     text.setPosition(40, 450);
@@ -171,10 +175,6 @@ void Game::drawBoardGame(sf::RenderWindow& window, Player& player, Dealer& deale
     text.setString("DEALER");
     text.setPosition(580, 0);
     window.draw(text);
-
-    cout << player.getState() << endl;
-    cout << "DEALER: " << dealer.points << endl;
-    cout << "PLAYER: " << player.points << endl;
 
     for (int i = 0; i < player.cards.size(); i++) {
         sf::Sprite card(Game::cards[player.cards[i]].texture);
