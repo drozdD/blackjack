@@ -119,7 +119,7 @@
     <PostBuildEvent>
       <Command>copy /Y "$(ProjectDir)*.h" "P:\include"
 copy /Y "$(SolutionDir)x64\Debug\*.dll" "P:\bin"
-copy /Y "$(SolutionDir)x64\Debug\*lib" "P:\lib"</Command>
+copy /Y "$(SolutionDir)x64\Debug\*lib" "P:\lib"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,10 +141,14 @@ copy /Y "$(SolutionDir)x64\Debug\*lib" "P:\lib"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="API.h" />
-    <ClInclude Include="Klasa.h" />
+    <ClInclude Include="Dealer.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Klasa.cpp" />
+    <ClCompile Include="Dealer.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
